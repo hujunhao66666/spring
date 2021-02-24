@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.kuang.di.address"></bean>
+    <bean id="student" class="com.kuang.di.student">
+        <property name="name" value="秦将"/>
+        <property name="add" ref="address"/>
+        <property name="book">
+            <array>
+                <value>红楼梦</value>
+                <value>三国演义</value>
+                <value>水浒传</value>
+                <value>西游记</value>
+            </array>
+        </property>
+        <property name="hobbys">
+            <list>
+                <value>围棋</value>
+                <value>敲代码</value>
+                <value>摄影</value>
+                <value>看电影</value>
+            </list>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="身份证" value="372901199912281637"></entry>
+                <entry key="银行卡" value="121345123"></entry>
+
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>2077</value>
+                <value>炉石传说</value>
+                <value>英雄联盟</value>
+                <value>热血英豪</value>
+            </set>
+        </property>
+        <property name="wife" value=""/>
+        <property name="info">
+            <props>
+                <prop key="学号">B18060328</prop>
+                <prop key="url">男</prop>
+            </props>
+        </property>
+    </bean>
+    
+
+</beans>
